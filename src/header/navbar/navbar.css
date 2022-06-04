@@ -14,13 +14,14 @@
 .menu-items {
   cursor: pointer;
 }
+
 .menu-items:hover {
-  background-color: #57e8bd6f;
+  text-decoration: underline;
 }
 
 .underline {
   width: clamp(500px, 70%, 1500px);
-  border-bottom: 2px solid black;
+  border-bottom: 4px solid white;
 }
 
 .navbar-spacing {
