@@ -8,6 +8,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'images/[hash]',
     clean: true,
   },
   devtool: 'inline-source-map',
@@ -22,15 +23,22 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Project Restaurant Page',
       template: './dist/index.html',
-      favicon: './src/favicon/favicon.png',
     }),
-    new FaviconsWebpackPlugin({ logo: './src/favicon/favicon.png' }),
+    new FaviconsWebpackPlugin({ logo: './src/images/favicon/favicon.png' }),
   ],
   module: {
     rules: [
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(woff|woff2|ttf|otf)$/i,
+        type: 'asset/resource',
       },
     ],
   },

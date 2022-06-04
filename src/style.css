@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Catamaran';
+  src: url('fonts/Catamaran/Catamaran-VariableFont_wght.ttf');
+}
+
+:root {
+  box-sizing: border-box;
+  font-size: 14pt;
+  font-family: 'Catamaran';
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+#content {
+  height: 100vh;
+}
+
+.background-fit {
+  background-image: url('./images/plate.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}

@@ -1,9 +1,28 @@
 .flex-nav {
   display: flex;
   flex-flow: row nowrap;
-  gap: 15px;
+  gap: 50px;
+  justify-content: center;
+
+  padding-inline-start: 0px;
 }
 
 .li-no-style {
   list-style: none;
+}
+
+.menu-items {
+  cursor: pointer;
+}
+.menu-items:hover {
+  background-color: #57e8bd6f;
+}
+
+.underline {
+  width: clamp(500px, 70%, 1500px);
+  border-bottom: 2px solid black;
+}
+
+.navbar-spacing {
+  margin-bottom: 15px;
 }
