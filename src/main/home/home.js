@@ -1,11 +1,21 @@
-import { entry } from '../../../webpack.config';
-import { scheduleModel } from './model/schedule_model';
-import scheduleEntry from './schedule_entry';
+import scheduleEntryComponent from './entry/schedule_entry';
+import style from './home.css';
 
 export default function home() {
-  const containerDiv = document.createElement('div');
-  for (entry of scheduleModel) {
-    containerDiv.appendChild(scheduleEntry(entry));
+  const _styleClasses = {
+    homeFlex: 'home-flex',
+  };
+
+  function render() {
+    const containerDiv = document.createElement('div');
+    containerDiv.classList.add(_styleClasses.homeFlex);
+
+    /** Different schedule entries */
+    const entries = ['Weekdays', 'Saturday', 'Sunday'];
+
+    entries.forEach((day) => containerDiv.appendChild(scheduleEntryComponent(day).render()));
+    return containerDiv;
   }
-  return containerDiv;
+
+  return { render };
 }

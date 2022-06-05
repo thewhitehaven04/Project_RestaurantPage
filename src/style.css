@@ -5,9 +5,24 @@
 
 :root {
   box-sizing: border-box;
-  font-size: 14pt;
+  font-size: 16pt;
   font-family: 'Catamaran';
+
+  --liver-chestnut: #936446ff;
+  --jet: #2b2b2bff;
+  --gray-x-11-gray: #bbb9baff;
+  --kombu-green: rgba(58, 173, 114, 0.888);
+  --dark-sienna: #300808ff;
 }
+
+.font-1_5rem {
+  font-size: 1.5rem;
+}
+
+.font-2rem {
+  font-size: 2rem;
+}
+
 *,
 *::after,
 *::before {

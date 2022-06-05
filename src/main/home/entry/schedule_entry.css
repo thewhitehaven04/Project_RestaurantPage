@@ -1,0 +1,34 @@
+.entry-green-theme {
+  color: white;
+  background-color: var(--kombu-green);
+}
+
+.entry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(max-content, 200px)); 
+  column-gap: 25px;
+
+  padding: 10px;
+}
+
+.weekday-entry {
+  grid-column: 1 / span 2;
+  place-self: flex-end;
+}
+
+.opening-hours-entry {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+.break-hours-entry {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+}
+
+.schedule-flex {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}

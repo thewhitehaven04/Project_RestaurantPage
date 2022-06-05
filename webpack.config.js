@@ -22,7 +22,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Project Restaurant Page',
-      template: './dist/index.html',
+      template: './src/index.html',
     }),
     new FaviconsWebpackPlugin({ logo: './src/images/favicon/favicon.png' }),
   ],

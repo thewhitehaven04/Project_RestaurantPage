@@ -7,11 +7,10 @@ export default function navBarComponent(tabCallbackMapping) {
   const ulBar = document.createElement('ul');
   ulBar.classList.add(...['flex-nav', 'li-no-style']);
 
-  for (tabKey of tabCallbackMapping) {
+  for (let tabKey in tabCallbackMapping) {
     const liTab = document.createElement('li');
     liTab.textContent = tabKey;
     liTab.classList.add('menu-items');
-
     liTab.addEventListener('click', (event) => {
       tabCallbackMapping[tabKey]();
     });

@@ -1,0 +1,16 @@
+.main-centered {
+  margin-top: 30px;
+
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.main-flex {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.main-white {
+  color: white;
+}
