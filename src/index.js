@@ -10,11 +10,11 @@ import mainComponent from './main/main';
 const RestaurantPageApp = function () {
   const divRoot = document.querySelector('#content');
 
-  function initComponents() {
+  function initComponents(props) {
     const main = mainComponent();
     const navHeaderComponent = headerComponent({
       Home: () => main.showTab(home().render()),
-      Menu: () => main.showTab(menu()),
+      Menu: () => main.showTab(menu(props.menuEntryCount).render()),
       'Order Online': () => main.showTab(order()),
       About: () => main.showTab(about()),
     });
@@ -26,13 +26,17 @@ const RestaurantPageApp = function () {
     divRoot.classList.add('background-fit');
   }
 
-  function run() {
+  function run(props) {
     _setBackground();
-    initComponents();
+    initComponents(props);
   }
 
   return { run };
 };
 
-const app = RestaurantPageApp();
-app.run();
+// high-level app configuration
+const appProps = {
+  menuEntryCount: 4,
+};
+
+RestaurantPageApp().run(appProps);

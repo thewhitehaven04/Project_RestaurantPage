@@ -1,6 +1,6 @@
 import style from './shadowed.css';
 
-function softShadowed(element) {
+function SoftShadowed(element) {
   const _SOFT_SHADOW_CLASS = 'soft-shadow';
 
   const wrap = function () {
@@ -11,4 +11,4 @@ function softShadowed(element) {
   return { wrap };
 }
 
-export { softShadowed };
+export { SoftShadowed };

@@ -1,0 +1,6 @@
+.grid-menu {
+  width: clamp(350px, 60%, 1400px);
+
+  display: grid;
+  row-gap: 20px;
+}

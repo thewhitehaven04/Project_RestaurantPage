@@ -1,0 +1,31 @@
+.grid-menu-card {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  grid-template-areas:
+    'image title'
+    'image title'
+    'image description'
+    'image description'
+    'image description'
+    'image description'
+    'image weight'
+    'image price';
+}
+
+.menu-card-style {
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.card-title {
+  grid-area: title;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.image-round {
+  width: 250px;
+  height: 250px;
+
+  border-radius: 4px;
+}

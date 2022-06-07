@@ -1,7 +1,10 @@
 import scheduleModel from './model/schedule_entry_model';
-import style from './schedule_entry.css';
-import { softShadowed } from './../../../generic/shadowed/shadowed';
+
+import { SoftShadowed } from './../../../generic/shadowed/shadowed';
+import { Theme } from '../../../generic/theme/theme';
+
 import mainStyle from './../../../style.css';
+import style from './schedule_entry.css';
 
 const scheduleEntryComponent = function (day) {
   /** Styles used throughout the module */
@@ -10,7 +13,6 @@ const scheduleEntryComponent = function (day) {
     breakHours: 'break-hours-entry',
     openHours: 'opening-hours-entry',
     entryGrid: 'entry-grid',
-    theme: 'entry-green-theme',
     softShadow: 'soft-shadow',
     largeFont: 'font-1_5rem',
   };
@@ -47,7 +49,7 @@ const scheduleEntryComponent = function (day) {
       scheduleEntryContainer.appendChild(_breakHoursElement(day));
     }
 
-    return softShadowed(scheduleEntryContainer).wrap();
+    return Theme(SoftShadowed(scheduleEntryContainer).wrap()).apply('green');
   }
 
   return { render };
