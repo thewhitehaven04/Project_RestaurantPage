@@ -45,7 +45,7 @@ export default function menuCard(modelData) {
     const spanValue = document.createElement('span');
 
     spanKey.textContent = 'Weight: ';
-    spanValue.textContent = weight;
+    spanValue.textContent = `${weight} kg.`;
 
     container.appendChild(spanKey);
     container.appendChild(spanValue);

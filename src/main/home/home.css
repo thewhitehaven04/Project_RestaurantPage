@@ -1,6 +1,19 @@
-.home-flex {
+.flex-title {
+  padding-top: 10%;
+
   display: flex;
   flex-flow: column nowrap;
 
-  gap: 25px;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Julius Sans One';
+  font-size: clamp(1vw, 6rem, 90px);
+  font-style: bold;
+
+  text-decoration: solid ;
+  color: white; 
+
+  text-shadow: 2px 2px 9px black; 
 }

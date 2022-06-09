@@ -1,20 +1,28 @@
-import scheduleEntryComponent from './entry/schedule_entry';
+import scheduleEntryComponent from '../about/entry/schedule_entry';
 import style from './home.css';
+import logo from './image/bass-fish-black.png';
 
 export default function home() {
   const _styleClasses = {
-    homeFlex: 'home-flex',
+    textCentered: 'flex-title',
+    title: 'title',
   };
 
   function render() {
-    const containerDiv = document.createElement('div');
-    containerDiv.classList.add(_styleClasses.homeFlex);
+    const div = document.createElement('div');
+    div.classList.add(_styleClasses.textCentered);
 
-    /** Different schedule entries */
-    const entries = ['Weekdays', 'Saturday', 'Sunday'];
+    const divText = document.createElement('div');
+    divText.textContent = 'Fish corner';
+    divText.classList.add(_styleClasses.title);
 
-    entries.forEach((day) => containerDiv.appendChild(scheduleEntryComponent(day).render()));
-    return containerDiv;
+    const img = new Image(400, 400);
+    img.src = logo;
+
+    div.appendChild(divText);
+    div.appendChild(img);
+    
+    return div;
   }
 
   return { render };

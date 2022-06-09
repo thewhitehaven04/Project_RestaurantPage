@@ -1,9 +1,9 @@
 import scheduleModel from './model/schedule_entry_model';
 
-import { SoftShadowed } from './../../../generic/shadowed/shadowed';
+import { SoftShadowed } from '../../../generic/shadowed/shadowed';
 import { Theme } from '../../../generic/theme/theme';
 
-import mainStyle from './../../../style.css';
+import mainStyle from './../../main.css';
 import style from './schedule_entry.css';
 
 const scheduleEntryComponent = function (day) {

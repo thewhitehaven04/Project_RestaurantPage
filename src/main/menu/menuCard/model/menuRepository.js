@@ -7,7 +7,13 @@ import lobsterSoup from './../../images/lobsterSoup.jpeg';
 
 function menuRepository() {
   const _menuItems = [
-    menuItem('Lobster Soup', null, 0.3, 13.5, lobsterSoup),
+    menuItem(
+      'Lobster Soup',
+      "Lobster Bisque is a classic entree of French origin, and it's a creamy, smooth, and flavorful soup based on a strained lobster broth.",
+      0.3,
+      13.5,
+      lobsterSoup,
+    ),
     menuItem(
       'Fine de Claire N2',
       'Marennes-Oléron, France - rich in water and with a balanced aroma. It is a superior quality oyster with a balanced salty and sweet flavour.',
@@ -20,7 +26,6 @@ function menuRepository() {
       'River Blackwater, Maldon, Essex, England – distinct fl avour and meatiness with a strong metallic finish which builds to a crescendo. 6 pcs.',
       0.2,
       19.5,
-      './../images/maldon_rock_oysters.jpeg',
       maldonNo3,
     ),
     menuItem(
