@@ -2,3 +2,8 @@
   background-color: var(--kombu-green);
   color: white;
 }
+
+.white {
+  background-color: var(--white);
+  color: var(--jet);
+}

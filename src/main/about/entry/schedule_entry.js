@@ -1,6 +1,5 @@
 import scheduleModel from './model/schedule_entry_model';
 
-import { SoftShadowed } from '../../../generic/shadowed/shadowed';
 import { Theme } from '../../../generic/theme/theme';
 
 import mainStyle from './../../main.css';
@@ -49,7 +48,7 @@ const scheduleEntryComponent = function (day) {
       scheduleEntryContainer.appendChild(_breakHoursElement(day));
     }
 
-    return Theme(SoftShadowed(scheduleEntryContainer).wrap()).apply('green');
+    return Theme(scheduleEntryContainer).apply('white');
   }
 
   return { render };

@@ -1,6 +1,4 @@
-import { SoftShadowed, softShadowed } from '../../../generic/shadowed/shadowed';
 import style from './menuCard.css';
-import { Theme } from '../../../generic/theme/theme';
 
 export default function menuCard(modelData) {
   /** The classes to apply to card elements */
@@ -9,6 +7,8 @@ export default function menuCard(modelData) {
     cardTitle: 'card-title',
     imageStyle: 'image-round',
     menuCardStyle: 'menu-card-style',
+    largeFont: 'font-1_5rem',
+    itemPrice: 'item-price',
   };
 
   /** The card elements respective grid areas. */
@@ -19,9 +19,7 @@ export default function menuCard(modelData) {
     image: 'image',
   };
 
-  function _image() {
-    const imgWidth = 300;
-    const imgHeight = 300;
+  function _image(imgWidth, imgHeight) {
     const img = new Image(imgWidth, imgHeight);
 
     img.src = modelData.imageUrl;
@@ -43,6 +41,7 @@ export default function menuCard(modelData) {
     const container = document.createElement('div');
     const spanKey = document.createElement('span');
     const spanValue = document.createElement('span');
+    container.style.gridArea = _gridAreas.weight;
 
     spanKey.textContent = 'Weight: ';
     spanValue.textContent = `${weight} kg.`;
@@ -54,18 +53,19 @@ export default function menuCard(modelData) {
     return frag;
   }
 
-  function _itemProperty(propertyName) {
+  function _itemDescription() {
     const spanProperty = document.createElement('span');
-    spanProperty.textContent = modelData[propertyName];
-    spanProperty.style.gridArea = _gridAreas[propertyName];
+    spanProperty.textContent = modelData.description;
+    spanProperty.style.gridArea = _gridAreas.description;
     return spanProperty;
   }
 
   function _itemPrice(price) {
     const frag = document.createDocumentFragment();
     const span = document.createElement('span');
+    span.classList.add(...[_styleClasses.itemPrice, _styleClasses.largeFont]);
 
-    span.textContent = `Price: ${price}$`;
+    span.textContent = `${price}$`;
     frag.appendChild(span);
     return frag;
   }
@@ -75,12 +75,12 @@ export default function menuCard(modelData) {
     article.classList.add(...[_styleClasses.gridCard, _styleClasses.menuCardStyle]);
 
     article.appendChild(_cardTitle(modelData.name));
-    article.appendChild(_image());
-    article.appendChild(_itemProperty('description'));
-    article.appendChild(_itemPrice(modelData.price));
+    article.appendChild(_image(300, 300));
+    article.appendChild(_itemDescription());
     article.appendChild(_itemWeight(modelData.weightKilos));
+    article.appendChild(_itemPrice(modelData.price));
 
-    return SoftShadowed(Theme(article).apply('green')).wrap();
+    return article;
   }
   return { render };
 }

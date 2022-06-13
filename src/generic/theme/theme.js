@@ -4,6 +4,7 @@ import style from './themes.css';
 function Theme(element) {
   const _themes = {
     green: 'green',
+    white: 'white'
   };
 
   const apply = function (themeName) {

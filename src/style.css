@@ -12,12 +12,14 @@
   box-sizing: border-box;
   font-size: 18pt;
   font-family: 'Catamaran';
+  line-height: 1.4;
 
   --liver-chestnut: #936446ff;
   --jet: #2b2b2bff;
   --gray-x-11-gray: #bbb9baff;
-  --kombu-green: rgba(52, 135, 92, 0.882);
-  --dark-sienna: #300808ff;
+  --white: #efeeee;
+  --kombu-green: rgba(73, 127, 103, 0.745);
+  --yellow: #5f168d;
 }
 
 .font-1_5rem {
@@ -40,6 +42,7 @@
 
 .background-fit {
   background-image: url('./images/plate_2.jpeg');
-  background-attachment: fixed;
-  background-size: cover;
+  background-clip: border-box;
+  background-attachment: scroll;
+  background-size: 100%;
 }

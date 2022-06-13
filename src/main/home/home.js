@@ -1,6 +1,6 @@
 import scheduleEntryComponent from '../about/entry/schedule_entry';
 import style from './home.css';
-import logo from './image/bass-fish-black.png';
+import logo from './image/bass-fish-white-outline.png';
 
 export default function home() {
   const _styleClasses = {
@@ -16,7 +16,7 @@ export default function home() {
     divText.textContent = 'Fish corner';
     divText.classList.add(_styleClasses.title);
 
-    const img = new Image(400, 400);
+    const img = new Image(600, 600);
     img.src = logo;
 
     div.appendChild(divText);

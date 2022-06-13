@@ -1,6 +1,12 @@
 .home-flex {
   display: flex;
   flex-flow: column nowrap;
+}
 
-  gap: 25px;
+.home-padding {
+  padding: 30px;
+}
+
+.home-flex > :not(:last-child) {
+  border-bottom: 4px solid var(--jet);
 }

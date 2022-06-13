@@ -9,6 +9,8 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+
+  overflow-y: auto;
 }
 
 .main-white {
