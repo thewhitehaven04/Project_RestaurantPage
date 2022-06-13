@@ -13,13 +13,12 @@ export default function contactForm() {
 
   /** Renders the contact form message with additional padding on top */
   function _renderContactMessage() {
-    const spanMessage = document.createElement('span');
-    spanMessage.innerHTML =
-      'We work for you 7 days a week, 365 days a year so that you have a place to enjoy quality food and have a good time.<br>' +
+    const divMessage = document.createElement('span');
+    divMessage.innerHTML =
+      'We work for you 7 days a week, 365 days a year so that you have a place to enjoy quality food and have a good time. ' +
       'If you have any questions or wishes, please contact our administrator.';
-    spanMessage.classList.add(_styleClasses.message);
-    
-    return spanMessage;
+    divMessage.classList.add(_styleClasses.message);
+    return divMessage;
   }
 
   function renderContactProperty(howToContact) {

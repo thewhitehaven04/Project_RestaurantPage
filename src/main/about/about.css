@@ -1,19 +1,37 @@
-.home-flex {
+.about-flex {
   display: flex;
   flex-flow: row wrap;
-  column-gap: 40px;
+  gap: 40px;
 
   justify-content: center;
+  align-items: center;
 }
 
-.home-padding {
+.about-padding {
   padding: 30px;
 }
 
-.home-radius-15 {
+.about-radius-15 {
   border-radius: 15px;
+}
+
+.schedule-container-flex {
+  height: 100%;
 }
 
 .schedule-container-flex > :not(:last-child) {
   border-bottom: 4px solid var(--jet);
+}
+
+@media screen and (max-width: 1600px) {
+  .about-flex {
+    flex-flow: column wrap;
+    width: 100%;
+
+    row-gap: 40px;
+  }
+
+  .schedule-container-flex {
+    height: auto;
+  }
 }

@@ -6,16 +6,16 @@ import contactForm from './contact/contact';
 
 export default function about() {
   const _styleClasses = {
-    homeFlex: 'home-flex',
-    homePadding: 'home-padding',
+    aboutFlex: 'about-flex',
+    aboutPadding: 'about-padding',
     scheduleFlex: 'schedule-container-flex',
-    borderRadius: 'home-radius-15',
+    borderRadius: 'about-radius-15',
   };
 
   function _renderSchedule() {
     const scheduleContainter = document.createElement('div');
     scheduleContainter.classList.add(
-      ...[_styleClasses.scheduleFlex, _styleClasses.homePadding, _styleClasses.borderRadius],
+      ...[_styleClasses.scheduleFlex, _styleClasses.aboutPadding, _styleClasses.borderRadius],
     );
 
     /** Different schedule entries */
@@ -28,7 +28,7 @@ export default function about() {
   /** Renders the element that contains both the schedule and ways of contacting the restaurant as a flex-container with direction of `column`. */
   function render() {
     const containerDiv = document.createElement('div');
-    containerDiv.classList.add(_styleClasses.homeFlex);
+    containerDiv.classList.add(_styleClasses.aboutFlex);
 
     const schedule = _renderSchedule();
 
