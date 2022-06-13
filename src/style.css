@@ -37,12 +37,13 @@
 }
 
 #content {
-  height: 100vh;
+  min-height: 100vh;
+  height: max-content; 
 }
 
 .background-fit {
-  background-image: url('./images/plate_2.jpeg');
+  background-image: url('./images/top-view-fresh-fish-with-lemon-slices.png');
   background-clip: border-box;
-  background-attachment: scroll;
-  background-size: 100%;
+  background-attachment: fixed;
+  background-size: 100%; 
 }

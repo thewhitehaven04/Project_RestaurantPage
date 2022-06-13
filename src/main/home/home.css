@@ -17,3 +17,11 @@
 
   text-shadow: 2px 2px 9px black; 
 }
+
+.image-main-scalable {
+  aspect-ratio: 1;
+
+  width: max-content;
+  min-width: 300px;
+  max-width: 600px; 
+}

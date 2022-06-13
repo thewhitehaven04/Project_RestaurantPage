@@ -2,6 +2,7 @@ import menuRepository from './menuCard/model/menuRepository';
 import menuCard from './menuCard/menuCard';
 import style from './menu.css';
 import { SoftShadowed } from '../../generic/shadowed/shadowed';
+import { Theme } from '../../generic/theme/theme';
 
 export default function menu(menuEntryCount) {
   const _styleClasses = {
@@ -10,8 +11,12 @@ export default function menu(menuEntryCount) {
   };
 
   function render() {
+    const divContainer = document.createElement('div');
     const div = document.createElement('div');
-    div.classList.add(...[_styleClasses.gridMenu, _styleClasses.menuStyle]);
+
+    divContainer.appendChild(div);
+    divContainer.classList.add(_styleClasses.menuStyle);
+    div.classList.add(_styleClasses.gridMenu);
 
     menuRepository()
       .getItems(0, menuEntryCount)
@@ -19,7 +24,7 @@ export default function menu(menuEntryCount) {
         div.appendChild(menuCard(model).render());
       });
 
-    return SoftShadowed(div).wrap();
+    return Theme(SoftShadowed(divContainer).wrap()).apply('white');
   }
 
   return { render };

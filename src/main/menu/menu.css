@@ -8,14 +8,14 @@
   width: 60%;
   max-width: 1200px;
 
-  background-color: var(--white);
-  color: var(--jet);
-
   border-radius: 15px;
+  
+  padding: 15px 50px;
 }
 
 .grid-menu > * {
-  padding: 35px;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 .grid-menu > :not(:last-child){
