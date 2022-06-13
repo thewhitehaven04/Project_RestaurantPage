@@ -5,7 +5,7 @@ export const model = [
   },
   {
     displayName: 'E-Mail',
-    value: 'sometotallynotfakeemail@truethatbruh.com',
+    value: 'totallynotfakemail@truethatbruh.com',
   },
   {
     displayName: 'Address',

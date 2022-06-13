@@ -9,6 +9,8 @@
 .weekday-entry {
   grid-column: 1 / span 2;
   place-self: flex-end;
+
+  margin-block: 15px;
 }
 
 .opening-hours-entry {

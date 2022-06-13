@@ -35,10 +35,11 @@ export default function scheduleEntryComponent(day) {
     const scheduleEntryContainer = document.createElement('article');
     scheduleEntryContainer.classList.add(...[_styles.entryGrid, _styles.largeFont]);
 
-    const pTitle = document.createElement('p');
-    pTitle.textContent = day.toUpperCase();
-    pTitle.classList.add('weekday-entry');
-    scheduleEntryContainer.appendChild(pTitle);
+    const spanTitle = document.createElement('span');
+    spanTitle.textContent = day.toUpperCase();
+    spanTitle.classList.add('weekday-entry');
+
+    scheduleEntryContainer.appendChild(spanTitle);
     scheduleEntryContainer.appendChild(_workingHoursElement(day));
 
     const breakHours = scheduleModel.getBreakHours(day);
