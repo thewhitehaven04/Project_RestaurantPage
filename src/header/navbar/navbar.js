@@ -1,5 +1,7 @@
 import style from './navbar.css';
 
+/** Renders the navbar. Accepts `tabCallbackMapping` object that contains the names of tabs as keys and 
+ * callback functions that render the necessary tab elsewhere as their respective values */
 export default function navBarComponent(tabCallbackMapping) {
   const divWrapper = document.createElement('div');
   divWrapper.classList.add(...['navbar-spacing', 'underline']);
@@ -11,7 +13,7 @@ export default function navBarComponent(tabCallbackMapping) {
     const liTab = document.createElement('li');
     liTab.textContent = tabKey;
     liTab.classList.add('menu-items');
-    liTab.addEventListener('click', (event) => {
+    liTab.addEventListener('click', () => {
       tabCallbackMapping[tabKey]();
     });
 

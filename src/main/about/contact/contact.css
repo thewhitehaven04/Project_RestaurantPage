@@ -1,0 +1,36 @@
+.contact-flex-rows {
+  display: flex;
+  flex-flow: column wrap;
+  width: 50%;
+
+  justify-content: space-evenly;
+  
+  padding: 30px;
+  height: min-content;
+  margin-bottom: 8px;
+}
+
+.contact-flex-rows > :not(:last-child) {
+  border-bottom: 4px solid var(--jet);
+}
+
+.how-to-contact-flex {
+  display: flex;
+  flex-flow: column nowrap;
+
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  row-gap: 25px;
+  padding: 10px;
+}
+
+.contact-title {
+  align-self: flex-end;
+  text-transform: capitalize;
+  font-style: bold;
+}
+
+.contact-message {
+  padding-top: 20px;
+}

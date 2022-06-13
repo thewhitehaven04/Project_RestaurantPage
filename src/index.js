@@ -20,7 +20,7 @@ const RestaurantPageApp = function () {
     divRoot.appendChild(navHeaderComponent.render());
     divRoot.appendChild(main.render());
   }
-  
+
   function _setBackground() {
     divRoot.classList.add('background-fit');
   }

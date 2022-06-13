@@ -1,12 +1,19 @@
 .home-flex {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
+  column-gap: 40px;
+
+  justify-content: center;
 }
 
 .home-padding {
   padding: 30px;
 }
 
-.home-flex > :not(:last-child) {
+.home-radius-15 {
+  border-radius: 15px;
+}
+
+.schedule-container-flex > :not(:last-child) {
   border-bottom: 4px solid var(--jet);
 }

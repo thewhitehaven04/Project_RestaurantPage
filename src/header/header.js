@@ -2,7 +2,7 @@ import style from './header.css';
 import navBar from './navbar/navbar';
 
 export default function headerComponent(tabCallbackMapping) {
-  /** Render the header */
+  /** Renders the header element with the specified tab names */  
   function render() {
     const headerElement = document.createElement('header');
 

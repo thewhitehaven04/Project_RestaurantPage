@@ -1,4 +1,3 @@
-import scheduleEntryComponent from '../about/entry/schedule_entry';
 import style from './home.css';
 import logo from './image/bass-fish-white-outline.png';
 
@@ -9,7 +8,7 @@ export default function home() {
     image: 'image-main-scalable',
   };
 
-  function _renderImageResponsive(width, height) {
+  function _renderImageResponsive() {
     const img = new Image();
     img.src = logo;
     img.classList.add(_styleClasses.image);
@@ -29,7 +28,7 @@ export default function home() {
     div.classList.add(_styleClasses.textCentered);
 
     div.appendChild(_renderTitle('Fish Corner'));
-    div.appendChild(_renderImageResponsive(500, 500));
+    div.appendChild(_renderImageResponsive());
     
     console.dir(div);
     return div;

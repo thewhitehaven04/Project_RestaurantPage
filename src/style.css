@@ -14,12 +14,10 @@
   font-family: 'Catamaran';
   line-height: 1.4;
 
-  --liver-chestnut: #936446ff;
   --jet: #2b2b2bff;
   --gray-x-11-gray: #bbb9baff;
   --white: #efeeee;
   --kombu-green: rgba(73, 127, 103, 0.745);
-  --yellow: #5f168d;
 }
 
 .font-1_5rem {
